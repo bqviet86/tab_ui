@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container">
+            <header class="header">
+                <div class="header-item active">
+                    <i class="header-icon fas fa-code"></i>
+                    React
+                </div>
+                <div class="header-item">
+                    <i class="header-icon tab-icon fas fa-cog"></i>
+                    Angular
+                </div>
+                <div class="header-item">
+                    <i class="header-icon tab-icon fas fa-plus-circle"></i>
+                    Ember
+                </div>
+                <div class="header-item">
+                    <i class="header-icon tab-icon fas fa-pen-nib"></i>
+                    Vue.Js
+                </div>
+                <div class="line"></div>
+            </header>
+            <div class="body">
+                <div class="body-content active">
+                    <h2 class="body-content__title">React</h2>
+                    <p class="body-content__description">React makes it painless to create interactive UIs. Design
+                        simple views for each state in your application, and React will efficiently update and render
+                        just the right components when your data changes.</p>
+                </div>
+                <div class="body-content">
+                    <h2 class="body-content__title">Angular</h2>
+                    <p class="body-content__description">Angular is an application design framework and development
+                        platform for creating efficient and sophisticated single-page apps.</p>
+                </div>
+                <div class="body-content">
+                    <h2 class="body-content__title">Ember</h2>
+                    <p class="body-content__description">Ember.js is a productive, battle-tested JavaScript framework
+                        for building modern web applications. It includes everything you need to build rich UIs that
+                        work on any device.</p>
+                </div>
+                <div class="body-content">
+                    <h2 class="body-content__title">Vue.JS</h2>
+                    <p class="body-content__description">Vue (pronounced /vjuː/, like view) is a progressive framework
+                        for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the
+                        ground up to be incrementally adoptable.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const $ = document.querySelector.bind(document)
+        const $$ = document.querySelectorAll.bind(document)
+
+        const items = $$('.header-item')
+        const contents = $$('.body-content')
+
+        const itemActive = $('.header-item.active')
+        const line = $('.line')
+
+        line.style.left = itemActive.offsetLeft + 'px'
+        line.style.width = itemActive.offsetWidth + 'px'
+
+        items.forEach((item, index) => {
+            const content = contents[index]
+
+            item.onclick = function() {
+                $('.header-item.active').classList.remove('active')
+                $('.body-content.active').classList.remove('active')
+
+                line.style.left = this.offsetLeft + 'px'
+                line.style.width = this.offsetWidth + 'px'
+
+                this.classList.add('active')
+                content.classList.add('active')
+            }
+        })
+    </script>
+</body>
+
+</html>
