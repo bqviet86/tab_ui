@@ -14,7 +14,7 @@ html {
 }
 
 .wrap {
-    height: 721.6px;
+    height: 100vh;
     display: flex;
     background-color: rgba(0, 0, 0, .3);
 }
@@ -22,7 +22,7 @@ html {
 .container {
     margin: auto;
     width: 500px;
-    min-height: 270px;
+    height: 270px;
     padding: 16px;
     background-color: #fff;
     border-radius: 32px;
