@@ -16,9 +16,6 @@
     }
 
     .header-item {
-        /* padding: unset;
-        font-size: 15px;
-        margin: unset; */
         flex: 1;
         padding: unset;
         font-size: 14px;
