@@ -1,0 +1,28 @@
+/* PC  */
+@media (min-width: 64em) {
+
+}
+
+/* TABLET */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+
+}
+
+/* MOBILE */
+@media (max-width: 46.1875em) {
+    .container {
+        width: calc(100% - 16px);
+        height: 360px;
+    }
+
+    .header-item {
+        flex: 1;
+        padding: unset;
+        font-size: 14px;
+        margin: unset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
